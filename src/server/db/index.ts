@@ -1,11 +1,13 @@
 import * as mysql from 'mysql';
+import Chirps from './chirps'
 
 export const Connection = mysql.createConnection({
     host: 'localhost',
     port: 3306,
-    user: 'chirpr',
+    user: 'chirprapp',
     password: 'blahblah',
-    database: 'chirprapp'
+    database: 'chirpr',
+    
 });
 
 export const Query = (query: string, values?: Array<string | number>) => {
