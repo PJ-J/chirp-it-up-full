@@ -8,10 +8,8 @@ router.get('/api/hello', (req, res, next) => {
 });
 
 
-router.get('/api/chirps/:id', async (req, res) => { 
-    console.log("TEST")
-    try {
-        console.log(req.params.id);
+router.get('/api/chirps/:id', async (req, res) => {     
+    try {        
         res.json(await db.Chirps.one(req.params.id));
     } catch (e) {
         console.log(e);
